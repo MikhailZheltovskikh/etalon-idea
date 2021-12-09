@@ -1,0 +1,217 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+//start header
+
+.header__content {
+   min-height: 100vh;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+.header__inner {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   min-height: 100vh;
+   color: #ffffff;
+   text-align: center;
+}
+.header__content-top {
+   padding-top: 160px;
+}
+.header__content-bottom {
+   padding-bottom: 26px;
+}
+.header__content {
+   &-title {
+      font-size: 60px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 34px;
+   }
+   &-text {
+      font-size: 30px;
+   }
+   &-img {
+      margin-bottom: 36px;
+   }
+}
+.header__bottom-text {
+   font-size: 30px;
+   margin-bottom: 23px;
+}
+//end header
+//start info
+.info {
+   padding-top: 48px;
+   padding-bottom: 20px;
+   text-align: center;
+   &__title {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #765151;
+      margin-bottom: 32px;
+   }
+   &__text {
+      font-size: 14px;
+      line-height: 19px;
+   }
+   p {
+      max-width: 504px;
+      margin: 0 auto;
+      margin-bottom: 28px;
+   }
+}
+
+//end info
+//start new-opportunities
+.new-opportunities {
+   text-align: center;
+   background-color: #eae7e7;
+}
+.new-opportunities__title,
+.new-opportunities__item-title {
+   font-size: 30px;
+   font-weight: 700;
+   line-height: 41px;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   color: #765151;
+   margin-bottom: 40px;
+}
+.new-opportunities__box {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 36px;
+}
+.new-opportunities__item {
+   max-width: 268px;
+   background-color: #fff;
+   & + .new-opportunities__item {
+      margin-left: 24px;
+   }
+   &-title {
+      font-size: 16px;
+      padding: 26px 14px 24px;
+      margin-bottom: 0;
+   }
+
+   &-text {
+      padding: 24px 12px;
+      font-size: 14px;
+      line-height: 19px;
+      min-height: 147px;
+   }
+}
+.new-opportunities__btn {
+   font-size: 18px;
+   font-weight: 700;
+   line-height: 130%;
+   letter-spacing: 3.46589px;
+   color: #f0e3df;
+   padding: 12px 31px;
+   background-color: #765151;
+}
+//end new-opportunities
+//start social
+.social {
+   text-align: center;
+   background-color: #f0e3df;
+}
+.social__title {
+   font-size: 30px;
+   font-weight: 700;
+   line-height: 41px;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   color: #765151;
+   max-width: 974px;
+   margin: 0 auto;
+   margin-bottom: 24px;
+}
+.social__link {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.social__link-text {
+   font-weight: 600;
+   font-size: 24px;
+   line-height: 33px;
+   letter-spacing: 1.77947px;
+   color: #765151;
+}
+.social__link-instagram {
+   margin-left: 11px;
+}
+.social__link-vk {
+   margin-left: 18px;
+}
+//end social
+//start questions
+
+.questions__title {
+   font-size: 32px;
+   line-height: 32px;
+   text-align: center;
+   color: #404040;
+   margin-bottom: 35px;
+}
+.questions__item {
+   border-bottom: 1px solid #adadad;
+   padding: 25px 0;
+   &:first-child {
+      border-top: 1px solid #adadad;
+   }
+   &-title {
+      font-size: 20px;
+      line-height: 27px;
+      color: #404040;
+      position: relative;
+      &::before {
+         content: "";
+         position: absolute;
+         background-image: url(../images/arrow-quest.svg);
+         background-repeat: no-repeat;
+         background-position: center center;
+         width: 14px;
+         height: 7px;
+         top: 50%;
+         right: 9px;
+         cursor: pointer;
+      }
+   }
+}
+.questions__item-text {
+   font-size: 18px;
+   line-height: 150%;
+   color: #6e6e6e;
+   height: 0;
+   opacity: 0;
+   transition: all 0.1s;
+   max-width: 930px;
+}
+
+.questions__item.questions__item--active {
+   .questions__item-title {
+      font-weight: 700;
+      &::before {
+         background-image: url(../images/arrow-quest-2.svg);
+      }
+   }
+   .questions__item-text{
+      height: 100%;
+      opacity: 1;
+      padding-top: 25px;
+      transition: all 0.3s;
+   }
+}
+
+
+//end questions
+@import "midia";
